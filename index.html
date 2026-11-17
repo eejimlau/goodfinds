@@ -4,61 +4,118 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Good Finds MY</title>
-<meta name="description" content="Products featured by Good Finds MY, with affiliate links to Shopee Malaysia.">
+<meta name="description" content="Daily picks from Shopee Malaysia’s best sellers by Good Finds MY. Tap a product to check today’s price on Shopee.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b74412'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23fff'%3EGF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Good Finds MY">
+<meta property="og:description" content="Daily picks from Shopee Malaysia’s best sellers by Good Finds MY. Tap a product to check today’s price on Shopee.">
+<meta property="og:url" content="https://eejimlau.github.io/goodfinds/">
+<meta property="og:image" content="https://eejimlau.github.io/goodfinds/img/share.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1350">
+<link rel="canonical" href="https://eejimlau.github.io/goodfinds/">
 <style>
-  :root { --bg: #faf7f1; --ink: #191714; --soft: #5d5851; --accent: #b74412; --card: #ffffff; --line: #e9e2d6; }
+  :root { color-scheme: light dark; --bg: #faf7f1; --ink: #191714; --soft: #5d5851; --accent: #b74412; --on-accent: #ffffff; --card: #ffffff; --line: #e9e2d6; --chip: #f4eee3; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #171513; --ink: #f1ece4; --soft: #b5ada2; --accent: #ee7a40; --on-accent: #1d1206; --card: #23201c; --line: #3a342e; --chip: #312c26; } }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif; }
   header, main, footer { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
-  header { padding-top: 36px; padding-bottom: 8px; }
-  h1 { margin: 0; font-size: 28px; letter-spacing: .02em; color: var(--accent); }
-  .lead { margin: 6px 0 0; color: var(--soft); }
-  .note { margin: 18px 0 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--soft); font-size: 14px; }
-  main { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; padding-top: 24px; padding-bottom: 32px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
-  .shot img { display: block; width: 100%; height: auto; }
-  .body { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-  h2 { margin: 0; font-size: 17px; line-height: 1.35; overflow-wrap: anywhere; }
-  .body p { margin: 0; color: var(--soft); font-size: 15px; }
-  .go { margin-top: auto; display: block; text-align: center; padding: 12px 14px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+  header { padding-top: 28px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .mark { flex: none; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 700; font-size: 18px; }
+  h1 { margin: 0; font-size: 24px; line-height: 1.2; }
+  .tag { margin: 2px 0 0; color: var(--soft); font-size: 14px; }
+  .follow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .follow a { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; }
+  .note { margin: 14px 0 0; color: var(--soft); font-size: 13px; line-height: 1.5; }
+  .note b { color: var(--ink); }
+  main { padding-top: 18px; padding-bottom: 28px; }
+  .more { margin: 26px 0 12px; font-size: 14px; font-weight: 600; color: var(--soft); }
+  .grid { display: grid; gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: 112px minmax(0, 1fr); }
+  .shot { display: block; background: #fff; aspect-ratio: 1; align-self: start; }
+  .shot img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .body { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .eyebrow { margin: 0; font-size: 12px; font-weight: 600; color: var(--soft); }
+  h2 { margin: 0; font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
+  h2 a { color: inherit; text-decoration: none; }
+  .facts { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12px; color: var(--soft); }
+  .facts span { padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .hook { margin: 0; color: var(--soft); font-size: 14px; line-height: 1.5; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+  .go { grid-column: 1 / -1; margin: 0 12px 12px; display: block; text-align: center; padding: 12px 14px; border-radius: 10px; background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 700; }
   .go:hover, .go:focus-visible { filter: brightness(1.08); }
-  footer { padding-bottom: 40px; color: var(--soft); font-size: 13px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .lead { display: flex; flex-direction: column; }
+  .lead .eyebrow { color: var(--accent); font-size: 13px; }
+  .lead h2 { font-size: 21px; }
+  .lead .hook { font-size: 15px; -webkit-line-clamp: 6; line-clamp: 6; }
+  .lead .body { padding: 14px 16px; gap: 8px; }
+  .lead .go { margin: 0 16px 16px; padding: 14px; font-size: 17px; }
+  footer { padding-bottom: 40px; color: var(--soft); font-size: 13px; line-height: 1.6; }
+  footer p { margin: 0 0 8px; }
   footer a { color: inherit; }
-  .empty { grid-column: 1 / -1; color: var(--soft); }
+  .empty { color: var(--soft); }
+  @media (min-width: 640px) {
+    header { padding-top: 40px; }
+    h1 { font-size: 30px; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+    .card { display: flex; flex-direction: column; }
+    .body { padding: 14px 16px; flex: 1; }
+    .go { margin: 0 16px 16px; }
+    .lead { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); grid-template-rows: 1fr auto; }
+    .lead .shot { grid-row: 1 / 3; align-self: stretch; aspect-ratio: auto; min-height: 400px; }
+    .lead .body { padding: 28px 28px 12px; gap: 12px; justify-content: center; }
+    .lead h2 { font-size: 28px; line-height: 1.2; }
+    .lead .facts { font-size: 13px; }
+    .lead .hook { font-size: 17px; }
+    .lead .go { grid-column: 2; justify-self: start; min-width: 280px; margin: 0 28px 28px; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Good Finds MY</h1>
-  <p class="lead">Everyday finds on Shopee Malaysia · Pilihan harian di Shopee · 好物发现</p>
-  <p class="note">Affiliate links: if you buy through a link on this page, I may earn a commission. Check the current price and details on the product page.<br>Pautan afiliasi: saya mungkin menerima komisen bagi pembelian yang layak. Semak harga dan butiran terkini di halaman produk.<br>本页为联盟推广链接，符合条件的购买可能为我带来佣金；价格与规格以商品页为准。</p>
+  <div class="brand"><span class="mark" aria-hidden="true">GF</span><div><h1>Good Finds MY</h1><p class="tag">Daily picks from Shopee Malaysia · Pilihan harian · 每日好物</p></div></div>
+  <nav class="follow" aria-label="Follow"><a href="https://www.facebook.com/profile.php?id=61594951546145" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/goodfinds.mystore/" target="_blank" rel="noopener">Instagram</a></nav>
+  <p class="note"><b>Affiliate links.</b> I may earn a commission if you buy through this page. <span lang="ms">Pautan afiliasi: saya mungkin menerima komisen.</span> <span lang="zh-Hans">本页为联盟推广链接，购买可能为我带来佣金。</span></p>
 </header>
 <main>
-    <article class="card" lang="ms">
-      <a class="shot" href="https://s.shopee.com.my/1C0KM6Qvb" target="_blank" rel="sponsored nofollow noopener"><img src="img/ad19836f51-ms.jpg" alt="Xiaomi Smart Band 9 Active l 1.47&quot; Display l 18 Days Long Battery Life 1 Year Xiaomi Malaysia Warranty" width="1080" height="1350" loading="lazy"></a>
+    <article class="card lead" lang="ms">
+      <a class="shot" href="https://s.shopee.com.my/1C0KM6Qvb" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="img/p-ad19836f51-ms.webp" alt="" width="640" height="640"></a>
       <div class="body">
-        <h2>Xiaomi Smart Band 9 Active l 1.47&quot; Display l 18 Days Long Battery Life 1 Year Xiaomi Malaysia Warranty</h2>
-        <p>Sedang memilih gelang pintar untuk perjalanan ke tempat kerja dan rutin di pejabat? Xiaomi Smart Band 9 Active boleh dimasukkan dalam senarai untuk dibandingkan.</p>
-        <a class="go" href="https://s.shopee.com.my/1C0KM6Qvb" target="_blank" rel="sponsored nofollow noopener">Lihat di Shopee</a>
+        <p class="eyebrow">Pilihan terbaru · 17 Nov</p>
+        <h2 title="Xiaomi Smart Band 9 Active l 1.47&quot; Display l 18 Days Long Battery Life 1 Year Xiaomi Malaysia Warranty"><a href="https://s.shopee.com.my/1C0KM6Qvb" target="_blank" rel="sponsored nofollow noopener">Xiaomi Smart Band 9 Active</a></h2>
+        <p class="facts"><span>★ 5.0</span><span>2k+ terjual</span><small>seperti dipaparkan di Shopee, 14 Nov</small></p>
+        <p class="hook">Sedang memilih gelang pintar untuk perjalanan ke tempat kerja dan rutin di pejabat? Xiaomi Smart Band 9 Active boleh dimasukkan dalam senarai untuk dibandingkan.</p>
       </div>
+      <a class="go" href="https://s.shopee.com.my/1C0KM6Qvb" target="_blank" rel="sponsored nofollow noopener">Semak harga di Shopee <span aria-hidden="true">→</span></a>
+    </article>
+  <h2 class="more">More finds · Lagi pilihan · 更多好物</h2>
+  <div class="grid">
+    <article class="card" lang="en">
+      <a class="shot" href="https://s.shopee.com.my/1Lh1Da8B2v" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="img/p-a80255c4b1-en.webp" alt="" width="640" height="640" loading="lazy"></a>
+      <div class="body">
+        <p class="eyebrow">Posted 17 Nov</p>
+        <h2 title="Giselle Mini Rice Cooker with Non-stick aluminium inner Pot(food grade)and Steamer(1.2L/200W)KEA0371"><a href="https://s.shopee.com.my/1Lh1Da8B2v" target="_blank" rel="sponsored nofollow noopener">Giselle Mini Rice Cooker with Non-stick aluminium inner Pot</a></h2>
+        <p class="facts"><span>★ 4.9</span><span>80k+ sold</span><small>as shown on Shopee, 2 Nov</small></p>
+        <p class="hook">Usually prepare a small batch of rice? Add the Giselle KEA0371 mini rice cooker to your comparison list and check whether its specifications fit your routine.</p>
+      </div>
+      <a class="go" href="https://s.shopee.com.my/1Lh1Da8B2v" target="_blank" rel="sponsored nofollow noopener">Check price on Shopee <span aria-hidden="true">→</span></a>
     </article>
     <article class="card" lang="en">
-      <a class="shot" href="https://s.shopee.com.my/1Lh1Da8B2v" target="_blank" rel="sponsored nofollow noopener"><img src="img/a80255c4b1-en.jpg" alt="Giselle Mini Rice Cooker with Non-stick aluminium inner Pot(food grade)and Steamer(1.2L/200W)KEA0371" width="1080" height="1350" loading="lazy"></a>
+      <a class="shot" href="https://s.shopee.com.my/3VlVnMVZvd" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="img/p-ab67784766-en.webp" alt="" width="640" height="640" loading="lazy"></a>
       <div class="body">
-        <h2>Giselle Mini Rice Cooker with Non-stick aluminium inner Pot(food grade)and Steamer(1.2L/200W)KEA0371</h2>
-        <p>Usually prepare a small batch of rice? Add the Giselle KEA0371 mini rice cooker to your comparison list and check whether its specifications fit your routine.</p>
-        <a class="go" href="https://s.shopee.com.my/1Lh1Da8B2v" target="_blank" rel="sponsored nofollow noopener">View on Shopee</a>
+        <p class="eyebrow">Posted 2 Nov</p>
+        <h2 title="ATAS 1.8L Non Stick Cooker Mini Pot Multifunction Electric Cooker Rice Cooker Steamer Portable"><a href="https://s.shopee.com.my/3VlVnMVZvd" target="_blank" rel="sponsored nofollow noopener">ATAS 1.8L Non Stick Cooker Mini Pot Multifunction Electric…</a></h2>
+        <p class="facts"><span>★ 4.9</span><span>20k+ sold</span><small>as shown on Shopee, 2 Nov</small></p>
+        <p class="hook">Planning simple meals with limited counter space? The ATAS mini electric cooker is one option to add to your comparison list.</p>
       </div>
+      <a class="go" href="https://s.shopee.com.my/3VlVnMVZvd" target="_blank" rel="sponsored nofollow noopener">Check price on Shopee <span aria-hidden="true">→</span></a>
     </article>
-    <article class="card" lang="en">
-      <a class="shot" href="https://s.shopee.com.my/3VlVnMVZvd" target="_blank" rel="sponsored nofollow noopener"><img src="img/ab67784766-en.jpg" alt="ATAS 1.8L Non Stick Cooker Mini Pot Multifunction Electric Cooker Rice Cooker Steamer Portable" width="1080" height="1350" loading="lazy"></a>
-      <div class="body">
-        <h2>ATAS 1.8L Non Stick Cooker Mini Pot Multifunction Electric Cooker Rice Cooker Steamer Portable</h2>
-        <p>Planning simple meals with limited counter space? The ATAS mini electric cooker is one option to add to your comparison list.</p>
-        <a class="go" href="https://s.shopee.com.my/3VlVnMVZvd" target="_blank" rel="sponsored nofollow noopener">View on Shopee</a>
-      </div>
-    </article>
+  </div>
 </main>
-<footer>Updated 2026-11-17 · 3 products · <a href="privacy.html">Privacy</a></footer>
+<footer>
+  <p>I have not tested these products. Prices, stock and specifications change, so what the Shopee product page shows today is what counts. Ratings and sold counts are the figures Shopee displayed on the date given.<br><span lang="ms">Saya belum menguji produk ini. Semak harga, stok dan butiran terkini di halaman produk Shopee.</span><br><span lang="zh-Hans">这些商品我没有亲自试用；价格、库存与规格以 Shopee 商品页当天显示为准。</span></p>
+  <p>Updated 2026-11-17 · 3 products · <a href="privacy.html">Privacy</a></p>
+</footer>
 </body>
 </html>
